@@ -12,13 +12,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Waiter;
+import model.WaiterRecommendation;
 
 /**
  *
  * @author jbaldwin2
  */
-public class ItemSelectionController extends HttpServlet {
+public class ItemRecommendationController extends HttpServlet {
     private static final String RESULT_PAGE = "result.jsp";
     /**
      * Processes requests for both HTTP
@@ -59,7 +59,7 @@ public class ItemSelectionController extends HttpServlet {
         
         // Create a new instance of a model object
         // For some applications, we would not want to create a new one each time.
-        Waiter be = new Waiter();
+        WaiterRecommendation be = new WaiterRecommendation();
         // Always a good idea to trim and/or validate input data
         List result = be.getRecommends(c.trim());
 

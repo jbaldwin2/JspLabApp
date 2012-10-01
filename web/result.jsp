@@ -1,11 +1,3 @@
-<%
-    /*
-     * This is an example of a Java comment.
-     * This is the result page where the controller sends a response
-     * with the beer advice.
-     */
-%>
-
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 <%@page import="java.util.*" %>

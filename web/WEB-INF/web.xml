@@ -2,13 +2,32 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>ItemSelectionController</servlet-name>
-        <servlet-class>controller.ItemSelectionController</servlet-class>
+        <servlet-class>controller.ItemRecommendationController</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>ItemSelectionController</servlet-name>
         <url-pattern>/SelectItem.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+    <description>Main Controller Servlet</description>
+    <servlet-name>MainController</servlet-name>
+    <servlet-class>controller.MainController</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Sub controller for the order process. Called by MainController</description>
+    <servlet-name>OrderController</servlet-name>
+    <servlet-class>controller.OrderController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>MainController</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderController</servlet-name>
+    <url-pattern>/order</url-pattern>
+  </servlet-mapping>
     <session-config>
         <session-timeout>
             30

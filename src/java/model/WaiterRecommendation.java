@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author jbaldwin2
  */
-public class Waiter {
+public class WaiterRecommendation {
     /**
      * Retrieves the menu item recommendations.
      * 
