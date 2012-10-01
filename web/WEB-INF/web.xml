@@ -33,7 +33,34 @@
             30
         </session-timeout>
     </session-config>
+     <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.jsp</param-value>
+    </context-param>
+
+    <!-- Facelets pages will use the .xhtml extension -->
+    <context-param>
+    <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
+    <param-value>*.xhtml</param-value>
+  </context-param>  
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <!--Use this for the JSP labs
+        <welcome-file>index.jsp</welcome-file>-->
+        
+        <!--Use this for the JSF labs-->
+        <welcome-file>index.xhtml</welcome-file>        
     </welcome-file-list>
 </web-app>

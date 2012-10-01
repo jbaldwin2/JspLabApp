@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+    This is the home page and it provides links to the various demos.
+    Notice the /XML namespace (xmlns) definitions in the html tag. These
+    are just two of the many namespaces available in standard JSF. They
+    determine the specific JSF tags that can be used below.
+
+    For a good web reference to this and more about JSF 2 please visit:
+    http://www.mkyong.com/tutorials/jsf-2-0-tutorials/
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <title>Facelet Page Title :: Home Page</title>
+        <h:outputStylesheet name="main.css" library="styles" />
+    </h:head>
+    <h:body>
+        <h:panelGrid columns="1">
+            <h:outputText value="Navigation: Simple links using JSF" styleClass="headline1"/>
+            <h:link value="Order Demo" outcome="orderDemo"/>
+           
+        </h:panelGrid>
+    </h:body>
+</html>
+
