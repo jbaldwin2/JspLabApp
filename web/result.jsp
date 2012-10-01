@@ -21,7 +21,7 @@
     <h1 align="center">Menu Item Recommendations (JSP)</h1>
     <p>
 
-    <%
+    <% 
         List recs = (List)request.getAttribute("recommendations");
         Iterator it = recs.iterator();
         int count =1;
